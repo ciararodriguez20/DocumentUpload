@@ -33,9 +33,9 @@ REQUESTED
     <span class="upload-icon"></span>
 </span>
 
-REJECTED
+Declined
 <span class="badge-resend" id="resend-sm">
-    <p>Rejected</p>
+    <p>Declined</p>
     <span class="resend-icon"></span>
 </span>                                            
 
