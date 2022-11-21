@@ -207,6 +207,81 @@ ul {
   border-radius: 5px;
 }
 
+/***** I9 Model*********/
+
+.help-icon{
+  width: 1em;
+  height: 1em;
+  background-color: mediumblue;
+  display: flex;
+  align-items: center;
+  margin: 0 0.5em 0.5em 0.2em;
+  border-radius: 15px;
+  z-index: 9998;
+}
+
+.help-icon svg{
+  height: .5em;
+  width: .5em;
+  fill: #fff;
+  margin: auto;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 80%;
+  border-radius: 0.5rem;
+}
+
+.modal-content img{
+  margin: 1em 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid lightgrey;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 9999;
+}
+
+
+
 .document-title{
   text-align: center;
   margin-bottom: 2em;
@@ -302,7 +377,7 @@ section.accordion {
   display: block;
   opacity: 1;
   transform: translate(0, 0);
-  margin-top: 5px;
+  margin-top: 1em;
   margin-bottom: 15px;
   padding: 0 50px 0 87px;
   transition: .3s opacity, .6s max-height;
@@ -340,8 +415,7 @@ section.accordion {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  background: #fff;
-  box-shadow: 0 3px 10px -2px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 11px 3px rgb(0 0 0 / 15%);
   -webkit-tap-highlight-color: transparent;
 }
 #accordion ul li + li {
@@ -393,6 +467,10 @@ section.accordion {
 }
 #accordion ul li input[type=checkbox]:checked ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
+}
+
+.file-button {
+  margin: 1em 0 0 0;
 }
 
 

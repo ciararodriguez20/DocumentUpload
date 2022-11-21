@@ -12,7 +12,7 @@
 
 <body>
 
-
+    
 
     <aura:component controller="UploadDocumentsController"
         implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
@@ -83,7 +83,7 @@
         <div class="slds-align_absolute-center slds-m-top_small slds-text-heading_large">
             <span>Thank You for uploading your documents!</span>
         </div>
-        -->
+        --> 
             <aura:set attribute="else">
                 <!--
             <aura:if isTrue="{!v.showLoginForm}">
@@ -119,7 +119,26 @@
                     </div>
                 </div>
             </aura:if>  
+
             -->
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-button">×</span>
+                    <h3>I9 Information</h3>
+                    <p>Along with your I-9 Documents, we also need a picture of you. Employees
+                        must provide documentation to their employers to show their
+                        identity and authorization to work. Employees may present one section
+                        from List A or a
+                        combination of one selection from List B and one selection from List C.
+                        Please be sure to upload only
+                        original documents, no photo copies.</p>
+                    <!--"{!$Resource.I9_List_Docs}"-->
+                    <p><a href="https://www.uscis.gov/i-9-central/form-i-9-acceptable-documents"
+                            target="_blank">Click here for more information on acceptable I9
+                            documents</a></p>
+                    <img alt="i9-documents" src="./DocumentUpload_Images/I9_List_Docs.jpeg" />
+                </div>
+            </div>
                 <aura:if isTrue="{! !v.showLoginForm}">
                     <div class="slds-grid slds-grid_vertical" id="base-content">
                         <div class="slds-col">
@@ -139,7 +158,10 @@
                         <aura:if isTrue="{!v.contRecTypeName == 'Caregiver'}">
                             <h1 class="document-title">{!v.contRecTypeName} Documents</h1>
                             <!--Accordion Dropdown-->
-                            <h1 class="accordion-main-title">Employee Eligibility Documents</h1>
+                            <h1 class="accordion-main-title">Employee Eligibility Documents
+                                
+                            </h1>
+
                             <div id="accordion">
                                 <ul>
                                     <!--
@@ -159,10 +181,17 @@
                                             </svg>
                                         </span>
                                     -->
+                                   
+                                    
                                     <li>
                                         <input type="checkbox" checked>
                                         <i></i>
                                         <h2 id="accordion-title">
+                                            <span id="hlp" class="help-icon">
+                                                <svg class="slds-icon" aria-hidden="true">
+                                                    <use xlink:href="./Icons/utility-sprite/svg/symbols.svg#question"></use>
+                                                </svg>
+                                            </span>
                                             I9 Documents
                                             <span class="badge-upload" id="upload-sm">
                                                 <p>Requested</p>
@@ -195,22 +224,10 @@
                                             <!--Added in Icon Switch Logic Here-->
                                         </h2>
                                         <div>
-                                            <p>Along with your I-9 Documents, we also need a picture of you. Employees
-                                                must provide documentation to their employers to show their
-                                                identity and authorization to work. Employees may present one section
-                                                from List A or a
-                                                combination of one selection from List B and one selection from List C.
-                                                Please be sure to upload only
-                                                original documents, no photo copies.</p>
-                                            <!--"{!$Resource.I9_List_Docs}"-->
-                                            <p><a href="https://www.uscis.gov/i-9-central/form-i-9-acceptable-documents"
-                                                    target="_blank">Click here for more information on acceptable I9
-                                                    documents</a></p>
-                                            <img alt="i9-documents" src="./DocumentUpload_Images/I9_List_Docs.jpeg" />
                                             <div class="tier" id="accordion">
                                                 <ul>
                                                     <li>
-                                                        <input type="checkbox" checked>
+                                                        <input type="checkbox" unchecked>
                                                         <i></i>
                                                         <h2>List A</h2>
                                                         <div class="accordion-body">
@@ -273,7 +290,7 @@
                                             <div class="tier" id="accordion">
                                                 <ul>
                                                     <li>
-                                                        <input type="checkbox" checked>
+                                                        <input type="checkbox" unchecked>
                                                         <i></i>
                                                         <h2>List B & List C</h2>
                                                         <div class="accordion-body" style="padding: 0;" >
@@ -1191,6 +1208,9 @@
         })
     </script>
     -->
+    
+    <script type="text/javascript" src="./index.js"></script>
+
 </body>
 
 </html>
