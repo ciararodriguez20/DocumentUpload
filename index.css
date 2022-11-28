@@ -539,6 +539,7 @@ section.accordion {
 
 
 /*Submit Button Styling*/
+
 #button-container{
   height: 100px;
   position: relative;
@@ -552,6 +553,10 @@ section.accordion {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
+}
+#upload-icon{
+  padding-right: 5px;
+  font-size: 13px;
 }
 
 #submit-button{

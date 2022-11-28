@@ -141,24 +141,10 @@
             </div>
                 <aura:if isTrue="{! !v.showLoginForm}">
                     <div class="slds-grid slds-grid_vertical" id="base-content">
-                        <div class="slds-col">
-                            <div class="welcome">
-                                <h2>Welcome, {!v.enrollmentRec.Name}!</h2>
-                            </div>
-                            <div class="slds-grid slds-grid_vertical slds-align_absolute-center">
-                                <!--use aura:if for show-hide the loading spinner image
-                            <aura:if isTrue="{!v.showLoadingSpinner}">
-                                <div class="slds-text-body_small slds-text-color_error">Uploading... 
-                                    <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
-                                </div>
-                            </aura:if>
-                            -->
-                            </div>
-                        </div>
+                        
                         <aura:if isTrue="{!v.contRecTypeName == 'Caregiver'}">
-                            <h1 class="document-title">{!v.contRecTypeName} Documents</h1>
                             <!--Accordion Dropdown-->
-                            <h1 class="accordion-main-title">Employee Eligibility Documents
+                            <h1 class="accordion-main-title">Upload Employment Documents
                                 
                             </h1>
 
@@ -1183,7 +1169,7 @@
                             <div id="center-container" class="slds-grid slds-grid_vertical slds-align_absolute-center">
                                 <aura:if isTrue="{!v.showMainButton}">
                                     <div class="slds-col">
-                                        <button id="submit-button" onclick="{!c.doSaveMain}">Submit</button>
+                                        <button id="submit-button" onclick="{!c.doSaveMain}"><i class="fa fa-upload" id="upload-icon" aria-hidden="true"></i>Submit</button>
                                     </div>
                                 </aura:if>
                             </div>
