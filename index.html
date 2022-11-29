@@ -381,7 +381,13 @@
                                                     </li>
                                                 </ul>
                                             </div>
+                                            
                                         </div>
+                                        
+                                            
+                                                   
+                                            
+                                        
                                     </li>
 
                                     <li>
@@ -427,6 +433,7 @@
                                                 <p><span class="fa fa-circle fa-xs bullet-point"></span>W2</p>
                                                 <input class="file-button" type="file" name="filename">
                                             </div>
+                                            
                                             <!--Salesforce upload button/logic
                                                     <div class="slds-col slds-size_1-of-1">
                                                         <aura:iteration items="{!v.documentsList}" var="doc">
@@ -462,6 +469,7 @@
                                                     </div>
                                                     -->
                                         </div>
+                                        
                                     </li>
                                     <li>
                                         <input type="checkbox" checked>
@@ -536,6 +544,7 @@
                                                         </aura:iteration>
                                                     </div>
                                                     -->
+                                        
                                         </div>
                                     </li>
                                 </ul>
@@ -629,7 +638,8 @@
                                                         </aura:iteration>
                                                     </div>
                                                     -->
-                                            </div>
+                                                    
+                                                </div>
                                         </div>
                                     </li>
                                 </ul>
@@ -732,16 +742,18 @@
                                                                 </aura:iteration>
                                                             </div>
                                                             -->
+                                            
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-
+                           
                             <!--------------------->
 
 
                         </aura:if>
+                        
                         <!--
                         <div class="slds-col slds-m-horizontal_medium slds-m-top_large">
                             <div class="slds-grid slds-wrap wrapBoxCls">
@@ -1165,17 +1177,6 @@
                 </aura:if -->
 
 
-                        <div id="button-container">
-                            <div id="center-container" class="slds-grid slds-grid_vertical slds-align_absolute-center">
-                                <aura:if isTrue="{!v.showMainButton}">
-                                    <div class="slds-col">
-                                        <button id="submit-button" onclick="{!c.doSaveMain}"><i class="fa fa-upload" id="upload-icon" aria-hidden="true"></i>Submit</button>
-                                    </div>
-                                </aura:if>
-                            </div>
-                        </div>
-
-
         </aura:if>
         </aura:set>
         </aura:if>
@@ -1202,9 +1203,19 @@
         })
     </script>
     -->
-    
+    <footer>
+        <aura:if isTrue="{!v.showMainButton}">
+            <div id="submit" class="slds-col">
+                <button id="submit-button" onclick="{!c.doSaveMain}"><span class="fa fa-upload" id="upload-icon" aria-hidden="true"></span>Submit</button>
+            </div>
+        </aura:if>
+    </footer>
+
     <script type="text/javascript" src="./index.js"></script>
+   
+    
 
 </body>
+
 
 </html>
