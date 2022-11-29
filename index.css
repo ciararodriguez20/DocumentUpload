@@ -602,10 +602,12 @@ section.accordion {
 /************* FOOTER ******************/
 
 footer{
+  z-index: 9000;
   position: fixed;
   bottom: 10px;
   right: 0;
   left: 0;
+  
 }
 
 
